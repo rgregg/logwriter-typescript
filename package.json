@@ -1,11 +1,16 @@
 {
   "name": "helloworld-typescript",
   "version": "1.0.0",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/rgregg/helloworld-ts"
+  },
   "description": "Hello World application with TypeScript and Docker",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "tsc && node dist"
+    "serve": "tsc && node dist",
+    "push": "gcloud builds submit -t gcr.io/knative-samples/helloworld-ts"
   },
   "author": "",
   "license": "ISC",
