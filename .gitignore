@@ -1,0 +1,7 @@
+#Ignore transpiled code
+dist
+.DS_Store
+
+# Dependency directories
+typings
+node_modules
