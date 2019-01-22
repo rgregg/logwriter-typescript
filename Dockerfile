@@ -8,10 +8,14 @@ WORKDIR /app
 ADD . /app
 
 # Expose the port outside of the container
-EXPOSE 8080
+ENV PORT 8080
+EXPOSE $PORT
 
 # Grab dependencies and transpile src directory to dist
 RUN npm install && tsc
+
+# Copy over static files
+ADD ./static dist/static
 
 # Start the server
 ENTRYPOINT ["node", "dist/"]

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Log Writer Sample</title>
+        <style type="text/css">
+            body{ font-size: 11pt; font-family: sans-serif; }
+            div { margin-bottom: 1.0em;}
+            input { font-size: 11pt; font-family: sans-serif; }
+        </style>
+    </head>
+    <body>
+        <h1>Log Writer Sample</h1>
+        <form action="/log" method="GET">
+            <div>Severity:&nbsp;
+                <select name="type">
+                    <option value="log">Message</option>
+                    <option value="warn">Warning</option>
+                    <option value="error">Error</option>
+                </select>
+            </div>
+            <div>
+                Message:&nbsp;<input type="text" name="text" style="width: 300px">
+            </div>
+            <div>
+                <input type="submit" value="Write Log">
+            </div>
+        </form>
+    </body>
+</html>
