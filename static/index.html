@@ -1,28 +1,70 @@
 <html>
     <head>
-        <title>Log Writer Sample</title>
-        <style type="text/css">
-            body{ font-size: 11pt; font-family: sans-serif; }
-            div { margin-bottom: 1.0em;}
-            input { font-size: 11pt; font-family: sans-serif; }
-        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Write to logs</title>
     </head>
     <body>
-        <h1>Log Writer Sample</h1>
-        <form action="/log" method="GET">
-            <div>Severity:&nbsp;
-                <select name="type">
-                    <option value="log">Message</option>
-                    <option value="warn">Warning</option>
-                    <option value="error">Error</option>
-                </select>
-            </div>
-            <div>
-                Message:&nbsp;<input type="text" name="text" style="width: 300px">
-            </div>
-            <div>
-                <input type="submit" value="Write Log">
-            </div>
-        </form>
+        <div class="container">
+            <h1>Write to logs</h1>
+            <form>
+                <div class="form-group">
+                    <label for="severityInput">Message Severity</label>
+                    <select class="form-control col-sm-4" id="severityInput">
+                        <option value="0">Default</option>
+                        <option value="100">Debug</option>
+                        <option value="200" selected>Information</option>
+                        <option value="300">Notice</option>                        
+                        <option value="400">Warning</option>
+                        <option value="500">Error</option>
+                        <option value="600">Critical</option>
+                        <option value="700">Alert</option>
+                        <option value="800">Emergency</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="messageInput">Message</label>
+                    <textarea class="form-control" id="messageInput" placeholder="Message to log" rows="3"></textarea>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="useJsonFormat">
+                    <label class="form-check-label" for="useJsonFormat">Use JSON structured log format</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Write entry</button>
+
+                <div class="alert alert-success" role="alert" id="alertResponse" style="display: none">
+                    Success -- message written.
+                </div>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script>
+            $(function() {  //shorthand document.ready function
+                $('form').on('submit', function(e) {
+                    $('#alertResponse').hide();
+                    e.preventDefault();
+                    $.ajax('/log', {
+                        method: 'POST',
+                        dataType: 'json',
+                        data: {
+                            severity: $('#severityInput').val(),
+                            message: $('#messageInput').val(),
+                            useStructuredLogs: $('#useJsonFormat').is(':checked')
+                        },
+                        success: function(data, status, xhr) {
+                            $('#alertResponse').text("Success -- message written").addClass("alert-success").removeClass("alert-danger").show();
+                        },
+                        error: function(xhr, status, error) {
+                            $('#alertResponse').text("Error writing message: " + status).addClass("alert-danger").removeClass("alert-success").show();
+                        }
+                    });
+                });
+            });
+        </script>
     </body>
 </html>

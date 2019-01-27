@@ -1,4 +1,5 @@
 import app from './app'
+import * as express from 'express'
 
 const port = 8080
 

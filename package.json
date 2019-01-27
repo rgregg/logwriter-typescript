@@ -9,7 +9,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "tsc && node dist",
+    "serve": "copy static dist/static && tsc && node dist",
+    "serve-windows": "xcopy /s/y static dist\\static\\ && tsc && node dist",
     "push": "gcloud builds submit -t gcr.io/knative-samples/helloworld-ts"
   },
   "author": "",
