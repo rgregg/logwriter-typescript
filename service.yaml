@@ -9,4 +9,4 @@ spec:
       revisionTemplate:
         spec:
           container:
-            image: gcr.io/cloud-run-gke-demo/log-writer
+            image: gcr.io/cr-gke-demo/log-writer

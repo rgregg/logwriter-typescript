@@ -1,0 +1,168 @@
+gcloud alpha run deploy --image gcr.io/cloud-run-gke-demo/log-writer --log-http
+Service name: (log-writer):
+Deploying container to Cloud Run on GKE service [log-writer] in namespace [default] of cluster [cluster-5]
+=======================
+==== request start ====
+uri: https://container.googleapis.com/v1/projects/cloud-run-gke-demo/locations/us-east1-d/clusters/cluster-5?alt=json
+method: GET
+== headers start ==
+Authorization: --- Token Redacted ---
+accept: application/json
+accept-encoding: gzip, deflate
+content-length: 0
+user-agent: google-cloud-sdk x_Tw5K8nnjoRAqULM9PFAC2b gcloud/231.0.0 command/gcloud.alpha.run.deploy invocation-id/37f4ef554a3e4def8d2df20c8378e4e6 environment/None environment-version/None interactive/True from-script/False python/2.7.13 (Windows NT 10.0.17763)
+== headers end ==
+== body start ==
+
+== body end ==
+==== request end ====
+---- response start ----
+-- headers start --
+-content-encoding: gzip
+alt-svc: quic=":443"; ma=2592000; v="44,43,39"
+cache-control: private
+content-length: 7865
+content-location: https://container.googleapis.com/v1/projects/cloud-run-gke-demo/locations/us-east1-d/clusters/cluster-5?alt=json
+content-type: application/json; charset=UTF-8
+date: Mon, 28 Jan 2019 03:17:30 GMT
+server: ESF
+status: 200
+transfer-encoding: chunked
+vary: Origin, X-Origin, Referer
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+-- headers end --
+-- body start --
+{
+  "name": "cluster-5",
+  "nodeConfig": {
+    "machineType": "n1-standard-4",
+    "diskSizeGb": 100,
+    "oauthScopes": [
+      "https://www.googleapis.com/auth/cloud-platform"
+    ],
+    "imageType": "COS",
+    "serviceAccount": "default",
+    "diskType": "pd-standard"
+  },
+  "masterAuth": {
+    "username": "admin",
+    "password": "F9Mz4hAyjKcVmnOn",
+    "clusterCaCertificate": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURDekNDQWZPZ0F3SUJBZ0lRRksrcnVkMDAxdE40c2tpUjdTVzMwekFOQmdrcWhraUc5dzBCQVFzRkFEQXYKTVMwd0t3WURWUVFERXlRMVlUTTJNelF6TVMxbVlXVTBMVFF5TkRBdFlqWmpOQzA0WVRZeVltUTROREZoT0dRdwpIaGNOTVRrd01USXlNVFUwT0RJeldoY05NalF3TVRJeE1UWTBPREl6V2pBdk1TMHdLd1lEVlFRREV5UTFZVE0yCk16UXpNUzFtWVdVMExUUXlOREF0WWpaak5DMDRZVFl5WW1RNE5ERmhPR1F3Z2dFaU1BMEdDU3FHU0liM0RRRUIKQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUNWSEtLNHNSSzFMRWx6R1pUdXRyWVQ4ZkRLOE9lalV3K3RuUjFRZzdNagpNWTZZZy91TXljNHk0eGtvRzlxaS91aG9tRThZUG1WWVA2YWQwY1g1TXAwSnhSWisvSVF6QzBZdjRhaWZKNUJPCnUyTVIyK1pSeEUvLzVNSHJ3MHF4MDdVWGJ6VFBlcDNKdFlNREpNaENxUE8xM0pKbFNoYkoxRDE4R3NaZW4vKzEKaHZQMmFaaHZOKzdVc0tGemxIQkFZS0tsTXVPRDRwa29xRkgzRi82Rll4SGFDeXhmUHI3V2NmYzFmQ3NxYTVaMQpXZ3grM3AvNlFuNHFFSXFRUnp6anJUOTYzTU0rWnlFYkdlSElVYmdMeUUyaXBvOVNMMnM4OExEdEVzekNsL3VQCnVIeVlVRmRQbkIwV1FzV0ZpSEQyeVhVakpMUDQzYmNVZ3ZlM3MzaW8rNEh2QWdNQkFBR2pJekFoTUE0R0ExVWQKRHdFQi93UUVBd0lDQkRBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFCRwpxMms2Q2JDdWRwOE8rYzQ5VFJ1RkFpUE1rbkVaNGZGWm0wT1JTT2V2QW1PUDN4Zmpwdm1STDduNHZtMHY2TVJXCmRkOS9qL2tXck90eWVFY015VnUwVkhvanRpQUJ1eHprRi9FUi9vQXErQ2hQRjhXeUpSdnFjcmVEeUJsc1IyTFQKZjV5VG8zWEw1d1RCdU5qeEZOWGt2MFk4c0RVNGM0UGp5a21kTkVNMSt1VmtlZHhtcHdTdmNJbWRJeDRtVmZDbgpwYkpsNXJKbHllSlZHSUdqSUp5U3p3bkdIVHJUWHV1MlFuUk9yQllIMGUzbDlneGo4TllBMHpYdjltUFh6WlZyCkY3ckVKZFlZSklUa1diNXppc2IrSHFWOXdEYlhlbnk0OSs1ZzRyT3JselVmYUFBbjNTbm1ZempIdzhqNGxVNEEKNC9XRkZxSHFZY2RSVXlueklUdVUKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+    "clientCertificate": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMyakNDQWNLZ0F3SUJBZ0lRUWxkN2J1Z1lTdk00bG9VZGNjNTJUekFOQmdrcWhraUc5dzBCQVFzRkFEQXYKTVMwd0t3WURWUVFERXlRMVlUTTJNelF6TVMxbVlXVTBMVFF5TkRBdFlqWmpOQzA0WVRZeVltUTROREZoT0dRdwpIaGNOTVRrd01USXlNVFkwT0RJeldoY05NalF3TVRJeE1UWTBPREl6V2pBUk1ROHdEUVlEVlFRREV3WmpiR2xsCmJuUXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUtBb0lCQVFDaDRLSHpUWTRMb3ZJbjNRYWoKYk02cUlPYjNWdEdaN1A0Mkw4NWwvd2gzdzVzK21JeXlZWmo0Nm5xOUJ6RDFOak43VEFGQ1VSQmUzU0hEUWEyUgo3SXYxMElmdHNwT05Fci80TksyWkdCcjZLVlE1ZEVaSzh5NU03SU0vZzY3SXVYWUdjdGRsRWZSdndUd0RzdHZJCnJhVys3SjlZbndjYVhORnBERWltbjhyZ0JheDhGZG15dFNobWdBSEI0dUpNV1l4VWZTRnpEbXhoZXd1dWhSTTMKZldLQ2NGN2FBTklaMXZMcDhwcER6cjg5dVI5ditSSkMrU1JTczhIdFRoVHNBM2o3L0dxRVQ3djB5bmlIVnRUUgpGaHhFVEFpUGFGMmMvZmwzd2N4ZXk3SjFrVEFXYUZvWWp0Mzh1c2JnL1BNaFUwT0MwYmJDNXA4cllSRWdPdHZ0Ck9kd3BBZ01CQUFHakVEQU9NQXdHQTFVZEV3RUIvd1FDTUFBd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFJU1oKQTdqZk9IckNqMzNqWU5GMDdrTXNQTmJ2ZVgvakZOc2x4M0Nzb0pLczVKdjhBbXFBZGJEVjk0UHp1REtrZHBxLwpsa0QrQTZoNElhVXR3TG80M3pQUnY0WDZ0STMyUTVNc1NkVU1ra29jWGFZTEJtUUgwQ2NPQU9ob3FnSGVvdXFrCk8zdk1veW9OWWhVZEp1ZU9OOWg0SGpkdk1TRjd1d3hQSzRRZGxsYXgvRlgyYk9wN2RhR0tuSUw3MkRZYWlhankKNDVjRit4U0JGU3pjY0NqNGdDMDc3TDVWcjFoc2hTNTZjNmpNZW9HMm1tVG9id0F0WjVpdXNaSUhNWlR6SlJydwpFQTBvOEdhc3lsbG9nVkFyc2ZUVzBVODZkcFpybjhaTFZ6enRsUUVoZWZXT3ZjQ0NBRlFSME9tS1g2Q1RIUXkvCjhjdGE2dStTL3pqSW1hcWVsV0U9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K",
+    "clientKey": "LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBb2VDaDgwMk9DNkx5SjkwR28yek9xaURtOTFiUm1leitOaS9PWmY4SWQ4T2JQcGlNCnNtR1krT3A2dlFjdzlUWXplMHdCUWxFUVh0MGh3MEd0a2V5TDlkQ0g3YktUalJLLytEU3RtUmdhK2lsVU9YUkcKU3ZNdVRPeURQNE91eUxsMkJuTFhaUkgwYjhFOEE3TGJ5SzJsdnV5ZldKOEhHbHpSYVF4SXBwL0s0QVdzZkJYWgpzclVvWm9BQndlTGlURm1NVkgwaGN3NXNZWHNMcm9VVE4zMWlnbkJlMmdEU0dkYnk2ZkthUTg2L1Bia2ZiL2tTClF2a2tVclBCN1U0VTdBTjQrL3hxaEUrNzlNcDRoMWJVMFJZY1JFd0lqMmhkblAzNWQ4SE1Yc3V5ZFpFd0ZtaGEKR0k3ZC9Mckc0UHp6SVZORGd0RzJ3dWFmSzJFUklEcmI3VG5jS1FJREFRQUJBb0lCQUJBdS9RSHVCdjF5MVBMWApUZ3FZbmpDMENXTkE4c09JeGdGMDFoV3NZWlJYb2ZXb0dxamF5UWhacU51dEZGL3ZnMFlZV3lmZUl0elpEcjhPCm1lTzAybWxBNTlZRHZHeW1LenNOU1MyOUV6VmZYR1JDRTZUNm11NWwxdGxLdVBhb1UveGhEdGV6NjlRZ1pYZVoKTWcvbURHUUNGQXd3R2Uyd3lkN09zNVMwOVB0Z2JQQ2lwLzY2cGU0YWxENGl5ZnZwRVJSVTMzSzBVSC9Ha2UxcwpNWTBUQ1hON0RaZE16TGx5RXVNbHlPUHNRVGcyU2ZsNHF2V01pdmtMOHV4VUpYUmFhWXkxTHhMcVk1cWtFQWs1CjA5OUhTSktMVERTeXdScjNjMDFOZ1BjK0sxMFlVRnIyRVlqKzEzcUdkRUtDZ1dTZ2V5UGlCQmF4ZXgxbFlCTUQKYmx5MzdtRUNnWUVBNEZpYi9ONG5PQmF5WXVRZXZCQ2EyS1BPTXIxV2tZbyttTmVwMFh3QktQeDZRY01NOGFqTwpNcjV1a1hRR203ZVdDR3k1ZmRlTTMwaVJ5R0ZUczBXQm03RXJXM3lHZkZMZEtvU2wzSjY3b1pVZitRSnNBbHpYCitsNS9VdkhDN28yUmowbXV3M0tBMUVsbnJmUGJaZm0xZG5EY2dGRVlFcEFNRmZRSXBIWnNqQXNDZ1lFQXVMZW4KS1Z0NzhKaE5EMTJsMHlPT3JzcGxCRXRMbEFubzdKYUtCdXNoVXBaYUdKOGtlenhCZUdMUXhUcDdXMHowYmpzWQpwYTVWYm1UU2JPQm85cnJVZDIwLzRDUGNYNkdnbm5MVlYzMC9tbjdpVjNHRkNjSFlpNUtCL3JYbDk2cVhBOElvCnNLRUo5TFJYMVY5RkNGZitGV3JYTk5xZFozUTlvd0xNazFzTXBSc0NnWUFXUzVnTTlFTHZod25wWEFSVjZreUoKTlJZNzRxY2t4WmxjOVNuU1FNR1l3aWFnUEhNZjNRZkk4VFhweko4UGdKb3ZjaWFwQSsvakRNSTRLTHY1dC9HZQplR2YzcXBOdTdZay9QWG1DU0dBYk9jZTRwbTMzZWlTWXBDV0JKN2VZbjRjVXQxemYzWlJDQkoyQ0l4YnR0bmc3Ck1oSW55bWRiQ09lNmtzcjlGU3ZLYXdLQmdRQ25CRitmOUhrZk5RWlFRM09oY2tBYjZTTG5mQkZOUEp5Zjl3bTgKY2JQQ2tmSEsyM0pILzFhUFBJSGFJeVBRak1kaU9BcjBHNnBoVThZejdjRGFmbG1IMW45djhkemJseSs4dE1ZVQpBa3FWTGU4SDg3dS84OGNSaEJvSUxYNU9ycTgzRmNKbTJtVS9IaVZnNTNCcXQrMGtmbU15QmcxV3NuTGN4cllrCjhxbC9Td0tCZ0hxM3dmT1BiVUFBOUF4VWNOalZTWk5qVGhtK0FNQ2hrTmYyTFNyYlBDZ2pxN3luVXJteXNIcDcKU1NCVUNNZlZxc1ZkeFBxYlNEdU4yc3hPbXZHMlNESzFvMVpZTkdmUGN0dFJUNEkzRi9PbkdVcDFkN2NDb1ZGQwpqdSswT2hZdkpQTmZrN2NlbVdwZzc0dDJuNWw2RjJWUkFtSDAwMlNRZTRIWUlUWGJtRlQ1Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg=="
+  },
+  "loggingService": "logging.googleapis.com/kubernetes",
+  "monitoringService": "monitoring.googleapis.com/kubernetes",
+  "network": "default",
+  "clusterIpv4Cidr": "10.8.0.0/14",
+  "addonsConfig": {
+    "httpLoadBalancing": {},
+    "kubernetesDashboard": {
+      "disabled": true
+    },
+    "networkPolicyConfig": {
+      "disabled": true
+    }
+  },
+  "subnetwork": "default",
+  "nodePools": [
+    {
+      "name": "default-pool",
+      "config": {
+        "machineType": "n1-standard-4",
+        "diskSizeGb": 100,
+        "oauthScopes": [
+          "https://www.googleapis.com/auth/cloud-platform"
+        ],
+        "imageType": "COS",
+        "serviceAccount": "default",
+        "diskType": "pd-standard"
+      },
+      "initialNodeCount": 3,
+      "autoscaling": {},
+      "management": {
+        "autoUpgrade": true,
+        "autoRepair": true
+      },
+      "selfLink": "https://container.googleapis.com/v1/projects/cloud-run-gke-demo/zones/us-east1-d/clusters/cluster-5/nodePools/default-pool",
+      "version": "1.11.6-gke.3",
+      "instanceGroupUrls": [
+        "https://www.googleapis.com/compute/v1/projects/cloud-run-gke-demo/zones/us-east1-d/instanceGroupManagers/gke-cluster-5-default-pool-85586a70-grp"
+      ],
+      "status": "RUNNING"
+    }
+  ],
+  "locations": [
+    "us-east1-d"
+  ],
+  "labelFingerprint": "a9dc16a7",
+  "legacyAbac": {},
+  "networkPolicy": {},
+  "ipAllocationPolicy": {},
+  "masterAuthorizedNetworksConfig": {},
+  "networkConfig": {
+    "network": "projects/cloud-run-gke-demo/global/networks/default",
+    "subnetwork": "projects/cloud-run-gke-demo/regions/us-east1/subnetworks/default"
+  },
+  "selfLink": "https://container.googleapis.com/v1/projects/cloud-run-gke-demo/zones/us-east1-d/clusters/cluster-5",
+  "zone": "us-east1-d",
+  "endpoint": "35.237.240.152",
+  "initialClusterVersion": "1.11.6-gke.3",
+  "currentMasterVersion": "1.11.6-gke.3",
+  "currentNodeVersion": "1.11.6-gke.3",
+  "createTime": "2019-01-22T16:48:23+00:00",
+  "status": "RUNNING",
+  "nodeIpv4CidrSize": 24,
+  "servicesIpv4Cidr": "10.11.240.0/20",
+  "instanceGroupUrls": [
+    "https://www.googleapis.com/compute/v1/projects/cloud-run-gke-demo/zones/us-east1-d/instanceGroupManagers/gke-cluster-5-default-pool-85586a70-grp"
+  ],
+  "currentNodeCount": 3,
+  "location": "us-east1-d"
+}
+
+-- body end --
+total round trip time (request+response): 0.390 secs
+---- response end ----
+----------------------
+=======================
+==== request start ====
+uri: https://kubernetes.default/apis/serving.knative.dev/v1alpha1/namespaces/default/services/log-writer?alt=json
+method: GET
+== headers start ==
+Authorization: --- Token Redacted ---
+X-Goog-User-Project: cloud-run-gke-demo
+accept: application/json
+accept-encoding: gzip, deflate
+content-length: 0
+user-agent: google-cloud-sdk x_Tw5K8nnjoRAqULM9PFAC2b gcloud/231.0.0 command/gcloud.alpha.run.deploy invocation-id/38eebb2bf1cd4b0fb2140f20669ee1d0 environment/None environment-version/None interactive/True from-script/False python/2.7.13 (Windows NT 10.0.17763)
+== headers end ==
+== body start ==
+
+== body end ==
+==== request end ====
+---- response start ----
+-- headers start --
+audit-id: 0fa68eeb-9354-4a6b-83e0-345ba5b1de03
+content-length: 1182
+content-location: https://kubernetes.default/apis/serving.knative.dev/v1alpha1/namespaces/default/services/log-writer?alt=json
+content-type: application/json
+date: Mon, 28 Jan 2019 03:17:30 GMT
+status: 200
+-- headers end --
+-- body start --
+{"apiVersion":"serving.knative.dev/v1alpha1","kind":"Service","metadata":{"creationTimestamp":"2019-01-22T21:42:42Z","generation":1,"name":"log-writer","namespace":"default","resourceVersion":"530732","selfLink":"/apis/serving.knative.dev/v1alpha1/namespaces/default/services/log-writer","uid":"a5c0e718-1e8e-11e9-b9c9-42010a8e0164"},"spec":{"generation":1,"runLatest":{"configuration":{"revisionTemplate":{"spec":{"container":{"image":"gcr.io/cloud-run-gke-demo/log-writer"},"timeoutSeconds":300}}}}},"status":{"address":{"hostname":"log-writer.default.svc.cluster.local"},"conditions":[{"lastTransitionTime":"2019-01-22T21:42:50Z","severity":"Error","status":"True","type":"ConfigurationsReady"},{"lastTransitionTime":"2019-01-22T21:42:50Z","severity":"Error","status":"True","type":"Ready"},{"lastTransitionTime":"2019-01-22T21:42:50Z","severity":"Error","status":"True","type":"RoutesReady"}],"domain":"log-writer.default.35.237.52.36.xip.io","domainInternal":"log-writer.default.svc.cluster.local","latestCreatedRevisionName":"log-writer-00001","latestReadyRevisionName":"log-writer-00001","observedGeneration":1,"traffic":[{"percent":100,"revisionName":"log-writer-00001"}]}}
+
+-- body end --
+total round trip time (request+response): 0.327 secs
+---- response end ----
+----------------------
+ERROR: gcloud crashed (AttributeError): 'NoneType' object has no attribute 'labels'
+
+If you would like to report this issue, please run the following command:
+  gcloud feedback
+
+To check gcloud for common problems, please run the following command:
+  gcloud info --run-diagnostics
